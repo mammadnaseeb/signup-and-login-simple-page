@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Sign Up</title>
+   <link rel="stylesheet" href="coding.css"> </link>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="tabs">
+      <button class="btn-tab active" data-target="loginBox">Login</button>
+      <button class="btn-tab" data-target="signupBox">Sign Up</button>
+    </div>
+
+    <div id="loginBox" class="tab-content" style="display: block;">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="field">
+          <input type="text" id="loginUser" placeholder="Name" required />
+        </div>
+
+        <div class="field">
+          <input type="password" id="loginPwd" placeholder="Password" required />
+          <span class="toggle" onclick="toggleVisibility('loginPwd', this)">
+            <i class="fa fa-eye-slash"></i>
+          </span>
+        </div>
+
+        <button type="submit">Login</button>
+        <p class="status" id="loginStatus"></p>
+      </form>
+    </div>
+
+    <div id="signupBox" class="tab-content">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <div class="field">
+          <input type="text" id="signupUser" placeholder="Name" required />
+        </div>
+
+        <div class="field">
+          <input type="password" id="signupPwd" placeholder="Password" required />
+          <span class="toggle" onclick="toggleVisibility('signupPwd', this)">
+            <i class="fa fa-eye-slash"></i>
+          </span>
+        </div>
+
+        <button type="submit">Create Account</button>
+        <p class="status" id="signupStatus"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="coding.js"></script>
+</body>
+</html>
